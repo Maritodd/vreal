@@ -10,21 +10,17 @@
 </head>
 <body class="body">
     <main class="main">
-        <div class="header">
+        <div class="header underline-nav">
             <nav class="navbar">
                 <a class="navbar-list" >Portfolio</a>
-                <a class="navbar-list">About</a>
-                <div class="hexagon"><img class="logo" src="images/logo.png" alt="logo"></div>
-                <a class="navbar-list">Blog</a>
+                <a class="navbar-list left">about</a>
+                <img class="logo" src="images/logo.png" alt="logo">
+                <div class="hexagon log"></div>
+                <a class="navbar-list right">Blog</a>
                 <a class="navbar-list">Get in Touch</a>
             </nav>
         </div>
-        <!-- <div class="line">
-            <div class="line--before"></div>
-            <div class="line--before"></div>
-        </div> -->
-        <div class="image">
-                <div class="line--before"></div>
+        <div class="image underline">
             <img class="main-images" src="images/image.png" alt="images">
         </div>
         <div class="blog">
@@ -46,29 +42,47 @@
             </div>
         </div>
         <div class="contact">
-            <div class="getintouch">
+            <div class="contact-block">
                 <h2>Get in Touch</h2>
                 <p class="getintouch-objective">In order to get in touch use the contact form below:</p>
-            </div>
-            <div class="contact-row">
-                <div class="contact-column">
-                    <form action="/">
-                        <input class="input" type="text" placeholder="Name (Required)">
-                        <input class="input" type="text" placeholder="Email (Required)"> 
-                        <input class="input" type="text" placeholder="Subject"> 
-                        <textarea class="message" placeholder="Write your message here..."></textarea>
-                        <input class="submit" type="submit" value="SEND">
-                    </form>
+                <div class="contact-row">
+                        <div class="contact-column">
+                            <form class="huy" action="/">
+                                <input class="input" type="text" placeholder="Name (Required)">
+                                <input class="input" type="text" placeholder="Email (Required)"> 
+                                <input class="input" type="text" placeholder="Subject"> 
+                                <textarea class="message" placeholder="Write your message here..."></textarea>
+                                <input class="submit" type="submit" value="SEND">
+                        </form>
+                    </div>
                 </div>
-                <div class="contact-column_location">
-                    <p class="contact-column_text"><b>Quisque Hendrerit:</b> purus dapibus, ornare nibh vitae, viverra nibh. 
-                        Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor 
-                        luctus faucibus morbi vitae. </p>
+            </div>
+            <div class="contact-info">
+                <div class="contact-info_location">
+                    <p class="contact-info_text"><b>Quisque Hendrerit:</b> purus dapibus, ornare nibh vitae, viverra nibh. 
+                                Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor 
+                                luctus faucibus morbi vitae. </p>
+                    <div class="info">
+                        <div class="flex_text">
+                            <img class="location" src="images/location.png" alt="location">
+                            <p class="text">Elm St. 14/05 Lost City</p>
+                        </div>
+                        <div class="flex_text">
+                            <img class="phone" src="images/phone.png" alt="phone">
+                            <p class="text"> + 3528 331 86 35 </p>
+                        </div>
+                        <div class="flex_text">
+                            <img class="mail" src="images/mail.png" alt="mail">
+                            <p class="text">info@hexalcorp.com</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="footer">
-
+            <div class="footer-rights">
+                <p>© Copyright 2013 by PSDchat</p>
+            </div>
         </div>
     </main>
 </body>

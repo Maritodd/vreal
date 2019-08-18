@@ -20,19 +20,19 @@ html, body {
     color: #FFF;
     background-color: #323232;
     height: 63px;
-
+    width: 100%;
 }
 
 .navbar {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
     justify-content: center;
     list-style-type: none;
+    width: 100%;
 }
 
 .navbar-list {
-    display: flex;
+    margin: 0px 0px 0 0; 
     padding-top: 20px;
     padding-bottom: 20px;
     overflow: hidden;
@@ -42,17 +42,33 @@ html, body {
     cursor: pointer;
     text-transform: uppercase;
     text-decoration: none;
-    
+    color: #FFF;
+    transition: all .7s ease;
+    -webkit-transition: all .7s ease;
+    text-align: center;
 }
+
+.navbar-list:hover {
+  opacity: .9;
+  transition: all .6s ease;
+  -webkit-transition: all .6s ease;
+  color: rgb(1, 156, 21);
+  text-decoration: none;
+}
+
+.right {
+  margin-left: 10px;
+} 
 
 .logo {
     width: 64px;
     height: 55px;
+    z-index: 1;
+    margin-top: 20px;
+    margin-left: 19px;
     text-align: center;
-    margin-right: -80px;
-    margin-top: -20px;
-    /* z-index: 1; */
-}
+  }
+
 
 .hexagon {
   position: absolute;
@@ -85,23 +101,12 @@ html, body {
 .image {
   display: flex;
   justify-content: center;
-  margin-top: 115px;
-  margin-bottom: 115px;
-  margin-right: 33px;
-}
-
-/* .line { 
-  justify-content: space-between;
-  display: flex;
   flex-direction: column;
-  margin-top: 10px;
+  text-align: center;
+  align-items: center;
+  height: 750px;
+  width: 100%;
 }
-
-.line--before {
-  width: 410px;
-  height: 2px;
-  background-color: #e4e9eb;  
-} */
 
 .blog {
   width: 100%;
@@ -122,6 +127,10 @@ html, body {
 
 .author {
   padding: 25px;
+}
+
+.author-photo {
+  width: 100%;
 }
 
 .name {
@@ -146,8 +155,7 @@ html, body {
 }
 
 .links {
-  display: flex;
-  justify-content: right;
+  text-align: right;
 }
 
 .contact {
@@ -155,15 +163,10 @@ html, body {
   background-color: #323232;
   display: flex;
   color: #FFF;
-  flex-direction: column;
-  justify-content: center;
-  text-decoration: none;
-  align-items: center;
   width: 100%;
 }
 
 .getintouch {
-  justify-content: left;
   margin-right: 385px;
   color: #e0e0e0;
   font-size: 18px;
@@ -177,42 +180,35 @@ html, body {
   margin-bottom: 5px;
 }
 
-.contact-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.contact-column {
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: center;
-  align-items: center;
-  margin-left: 423px;
+.contact-block {
+  width: 60%;
+  margin: 45px 0px 0px 423px;
 }
 
 .input {
   color: #bebebe;
-  width: 580px;
+  width: 100%;
   height: 38px;
   background-color: #454545;
   border: none;
   font-family: "Open Sans", "sans-serif";
   margin-top: 6px;
   margin-bottom: 14px; 
+  text-indent: 5px;
 }
 
 .message {
   font-family: "Open Sans", "sans-serif";
   font-size: 15px;
-  width: 580px;
+  width: 100%;
   height: 150px;
   background-color: #454545;
   color: #bebebe;
   border: none;
   margin-top: 6px;
   margin-bottom: 14px;
+  text-indent: 5px;
+  resize: vertical;
 }
 
 .submit {
@@ -223,15 +219,234 @@ html, body {
   color: #FFF;
   font-family: "Open Sans", "sans-serif";
   cursor: pointer;
+  display: grid;
+  text-align: center;
+  margin-left: 494px;
+}
+
+.contact-info {
+  width: 90%;
+  margin: 115px 0px 0px 30px;
+}
+
+.contact-info_location {
+  width: 40%;
+}
+
+.contact-info_text, .info {
+  width: 190px;
+  height: 200px;
+  color: #bebebe;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.info {
+  text-indent: 10px;
+}
+
+.mail {
+  width: 13px;
+  height: 8px;
+  margin-top: 6px;
+}
+
+.location {
+  width: 7px;
+  height: 11px;
+  margin-top: 5px;
+}
+
+.phone {
+  width: 11px;
+  height: 11px;
+  margin-top: 5px;
+}
+
+.text {
+  margin: 0px 0px 0px 10px;
+  width: 100%;
+}
+
+.flex_text {
+  width: 100%;
   display: flex;
-  justify-items: right;
+  margin: 0 auto;
+  text-align: left;
 }
 
-.contact-column_location {
-  width: 50%;
+.footer {
+  height: 45px;
+  background-color: #222222;  
 }
 
-.contact-column_text {
-  width: 50%;
+.footer-rights {
+  color: #454545;
+  font-size: 14px;
+  font-weight: 400;
+  text-indent: 30px;
+}
 
+@media screen and (max-width: 1230px) {
+  .contact-block {
+    width: 60%;
+    margin: 45px 0px 0px 150px;
+    text-align: center;
+  }
+  .submit {
+    margin: 0;
+    text-align: center;
+  }
+  .contact-info {
+    width: 90%;
+    margin: 115px 0px 0px 30px;
+  }
+  .contact-info_text, .info {
+    width: 190px;
+    height: 200px;
+    color: #bebebe;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .main-images {
+    width: 90%;
+    padding: 0;
+  }
+  .blog {
+    width: 100%;
+  }
+  .blog-description {
+    width: 100%;
+    text-align: left;
+  } 
+  .blog-description_job, .job, .name  {
+    padding: 5px;
+  }
+  .links {
+    text-align: left;
+  }
+  .contact {
+    display: flex;
+    flex-direction: column;
+    height: 850px;
+  }
+  .contact-block {
+    width: 50%;
+    margin: 45px 0px 0px 150px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .submit {
+    margin: 0;
+    text-align: center;
+  }
+  .contact-info {
+    width: 100%;
+    margin: 45px 0px 0px 150px;
+  }
+  .contact-info_text, .info {
+    width: 255px;
+    height: 150px;
+    color: #bebebe;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 650px) {
+  .main, .navbar, .message, .contact {
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+  }
+  .logo {
+    display: none;
+  }
+  .main-images {
+    width: 75%;
+    padding: 0;
+  }
+  .image {
+    width: 100%;
+    height: 400px;
+    text-align: center;
+  }
+  .header {
+    width: 100%;
+    height: 270px;
+  }
+  .right {
+    margin-left: 0px;
+  } 
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .hexagon {
+    display: none;
+  }
+  .blog {
+    width: 100%;
+    height: 630px;
+    display: flex;
+    flex-direction: column;
+  }
+  .blog-description {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  } 
+  .blog-description_job {
+    padding: 10px;
+  }
+  .links {
+    text-align: center;
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    height: 850px;
+  }
+  .contact-block {
+    width: 65%;
+    margin: 45px 0px 0px 73px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .submit {
+    margin: 0;
+    text-align: center;
+  }
+  .contact-info {
+    width: 100%;
+    margin: 45px 0px 0px 73px;
+  }
+  .contact-info_text, .info {
+    width: 255px;
+    height: 150px;
+    color: #bebebe;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .contact-block, .contact-info {
+    width: 65%;
+    margin: 45px 0px 0px 55px;
+    text-align: center;
+  }
+  .contact-info_text, .info {
+    width: 200px;
+  }
 }
